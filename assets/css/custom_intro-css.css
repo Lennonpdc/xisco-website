@@ -1,0 +1,1338 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* NAVBAR CSS */
+.navbar {
+    background-color: rgba(255, 255, 255, 0);
+    /* White with slight transparency */
+    width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 1030;
+}
+
+.navbar.scrolled {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.400);
+    /* Optional shadow effect */
+}
+
+.navbar .nav-link {
+    color: white;
+    transition: color 0.1s ease;
+}
+
+/* .nav-item{
+    padding: 4rem;
+} */
+
+.navbar.scrolled .nav-link {
+    color: black;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    transition: color 0.1s ease;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-logo {
+    height: 50px;
+    margin-left: 5px;
+}
+
+/* END OF NAVBAR CSS */
+
+
+/* INTRODUCTION SECTION CSS */
+
+.intro-image {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    right: 0;
+    left: 0;
+    /* margin-right: -190px; */
+    object-fit: contain;
+    /* clip-path: ellipse(55% 100% at 92% 0%); */
+    /* Creates a crescent moon effect */
+    z-index: -1;
+}
+
+.intro-image-two {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+    /* Behind the parallelogram and text */
+}
+
+.intro-image-four {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+    /* Behind the parallelogram and text */
+}
+
+.img-parallelogram {
+    position: absolute;
+    /* Positioned over the image */
+    top: 50%;
+    /* Adjust vertical position */
+    left: 18%;
+    /* Adjust horizontal position */
+    transform: translate(-50%, -50%) skew(-20deg);
+    /* Center and skew the parallelogram */
+    width: 1200px;
+    height: 1200px;
+    background: linear-gradient(135deg, #ffffff49, #ffffff0a);
+    z-index: 2;
+    /* Same as the text or slightly lower edited 1-30-25 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* CAROUSEL CSS */
+/* Carousel is pushed slightly under the navbar */
+.carousel {
+    margin-top: -110px;
+    /* Adjust based on navbar height */
+}
+
+.carousel-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+}
+
+.carousel-font {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    color: #ffffff;
+    line-height: 3.2rem
+}
+
+/* Carousel item height for demo purposes */
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.custom-caption-one {
+    position: absolute;
+    /* Ensure it's absolutely positioned within the carousel */
+    top: 30%;
+    /* Adjust the vertical position */
+    left: 32%;
+    /* Center horizontally */
+    width: 60%;
+    /* Ensure full width */
+    transform: translateX(-50%);
+    /* Correct centering offset */
+    text-align: center;
+    /* Center text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-caption-two {
+    position: absolute;
+    /* Ensure it's absolutely positioned within the carousel */
+    top: 50%;
+    /* Adjust the vertical position */
+    left: 35%;
+    /* Center horizontally */
+    width: 60%;
+    /* Ensure full width */
+    transform: translate(-50%, -50%);
+    /* Center */
+    /* Correct centering offset */
+    text-align: start;
+    /* Center text */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    z-index: 3;
+}
+
+.custom-caption-three {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 60%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* INTRODUCTION SECTION Paragraph CSS */
+.intro-caption-one {
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    color: #ffffff;
+    line-height: 5rem
+}
+
+.intro-pcaption-one {
+    color: #000000;
+    font-style: italic;
+    font-size: 100px;
+}
+
+.intro-pcaption-sub {
+    width: 60%;
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 0.7px
+}
+
+.intro-pcaption-two {
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    color: #ffffff;
+    line-height: 7rem
+}
+
+.intro-pcaption-three {
+    color: #00158d;
+    font-style: italic;
+    font-size: 90px;
+}
+
+.intro-pcaption-four {
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    color: #00158d;
+    line-height: 7rem
+}
+
+/* INTRODUCTION SECTION DIVS CSS */
+.intro-div-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    position: absolute;
+    padding-left: 30px;
+}
+
+/* INTRODUCTION BUTTONS CSS */
+.intro-div-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    position: absolute;
+    padding-left: 30px;
+    top: 70%;
+}
+
+.intro-btn-one {
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #fcfcfc;
+    color: #00158d;
+    font-size: 15px
+}
+
+.intro-btn-two {
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #00158d;
+    color: #ffffff;
+    font-size: 15px
+}
+/* END OF INTRODUCTION CSS */
+
+
+/* GENERAL CSS */
+/* Semi large devices (tablets, 1449px and below) ADDED 1-31-25 */
+@media (max-width: 1449px) {
+
+    /* INTRODUCTION SECTION DIVS CSS */
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+    }
+
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        width: 55%;
+    }
+
+    .intro-caption-one {
+        font-size: 45px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+        line-height: 3rem
+    }
+
+    .intro-pcaption-sub {
+        width: 90%;
+        font-size: 15px;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        margin-top: -10px;
+    }
+
+    .intro-pcaption-one {
+        color: #000000;
+        font-style: italic;
+        font-size: 60px;
+    }
+
+    .intro-pcaption-two {
+        font-size: 90px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        color: #ffffff;
+        line-height: 7rem;
+    }
+
+    .intro-pcaption-three {
+        color: #00158d;
+        font-style: italic;
+        font-size: 90px;
+    }
+
+    .intro-pcaption-four {
+        font-size: 90px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        color: #00158d;
+        line-height: 7rem
+    }
+
+    /* INTRODUCTION BUTTONS CSS */
+    .intro-div-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        left: 2%;
+        top: 64%;
+    }
+
+    .intro-btn-one {
+        width: 170px;
+        height: 45px;
+        border-radius: 40px;
+        background-color: #fcfcfc;
+        color: #00158d;
+        font-size: 15px
+    }
+
+    .intro-btn-two {
+        width: 170px;
+        height: 45px;
+        border-radius: 40px;
+        background-color: #00158d;
+        color: #ffffff;
+        font-size: 15px
+    }
+
+    .intro-div-opacity {
+        display: none;
+    }
+
+    .intro-image {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .custom-caption-one {
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        z-index: 1;
+    }
+}
+
+/* Semi large devices (tablets, 1280px and below) ADDED 1-31-25 */
+@media (max-width: 1280px) {
+
+    /* INTRODUCTION SECTION DIVS CSS */
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+    }
+
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        width: 55%;
+    }
+
+    .intro-caption-one {
+        font-size: 45px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+        line-height: 3rem
+    }
+
+    .intro-pcaption-sub {
+        width: 90%;
+        font-size: 15px;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        margin-top: -10px;
+    }
+
+    .intro-pcaption-one {
+        color: #000000;
+        font-style: italic;
+        font-size: 60px;
+    }
+
+    .intro-pcaption-two {
+        font-size: 75px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+        line-height: 6rem;
+    }
+
+    .intro-pcaption-three {
+        color: #00158d;
+        font-style: italic;
+        font-size: 75px;
+    }
+
+    .intro-pcaption-four {
+        font-size: 90px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        color: #00158d;
+        line-height: 7rem
+    }
+
+    /* INTRODUCTION BUTTONS CSS */
+    .intro-div-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        left: 2%;
+        top: 68%;
+    }
+
+    .intro-btn-one {
+        width: 170px;
+        height: 45px;
+        border-radius: 40px;
+        background-color: #fcfcfc;
+        color: #00158d;
+        font-size: 15px
+    }
+
+    .intro-btn-two {
+        width: 170px;
+        height: 45px;
+        border-radius: 40px;
+        background-color: #00158d;
+        color: #ffffff;
+        font-size: 15px
+    }
+
+    .intro-div-opacity {
+        display: none;
+    }
+
+    .intro-image {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .custom-caption-one {
+        position: absolute;
+        top: 60%;
+        left: 24%;
+        width: 50%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        z-index: 1;
+    }
+
+    .custom-caption-two {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        z-index: 3;
+    }
+
+    .img-parallelogram {
+        position: absolute;
+        /* Positioned over the image */
+        top: 50%;
+        /* Adjust vertical position */
+        left: 15%;
+        /* Adjust horizontal position */
+        transform: translate(-50%, -50%) skew(-20deg);
+        /* Center and skew the parallelogram */
+        width: 925px;
+        height: 1400px;
+        background: linear-gradient(135deg, #ffffff0a, #ffffff8a);
+        z-index: 2;
+        /* Same as the text or slightly lower edited 1-30-25 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+
+/* Semi large devices (tablets, 1024px and below) ADDED 1-31-25 */
+@media (max-width: 1024px) {
+
+    /* INTRODUCTION SECTION DIVS CSS */
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+    }
+
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        width: 55%;
+    }
+
+    .intro-caption-one {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 2.8rem
+    }
+
+    .intro-pcaption-sub {
+        width: 90%;
+        font-size: 15px;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        margin-top: -10px;
+    }
+
+    .intro-pcaption-one {
+        color: #000000;
+        font-style: italic;
+        font-size: 50px;
+    }
+
+    .intro-pcaption-two {
+        font-size: 75px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+        line-height: 6rem;
+    }
+
+    .intro-pcaption-three {
+        color: #00158d;
+        font-style: italic;
+        font-size: 90px;
+    }
+
+    .intro-pcaption-four {
+        font-size: 75px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #00158d;
+        line-height: 5rem
+    }
+
+    /* INTRODUCTION BUTTONS CSS */
+    .intro-div-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        left: 2%;
+        top: 82%;
+    }
+
+    .intro-btn-one {
+        width: 170px;
+        height: 45px;
+        border-radius: 40px;
+        background-color: #fcfcfc;
+        color: #00158d;
+        font-size: 15px
+    }
+
+    .intro-btn-two {
+        width: 170px;
+        height: 45px;
+        border-radius: 40px;
+        background-color: #00158d;
+        color: #ffffff;
+        font-size: 15px
+    }
+
+    .intro-div-opacity {
+        display: none;
+    }
+
+    .intro-image {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .custom-caption-one {
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        width: 50%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        z-index: 1;
+    }
+
+    .custom-caption-two {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        z-index: 3;
+    }
+
+    .img-parallelogram {
+        position: absolute;
+        /* Positioned over the image */
+        top: 50%;
+        /* Adjust vertical position */
+        left: 15%;
+        /* Adjust horizontal position */
+        transform: translate(-50%, -50%) skew(-20deg);
+        /* Center and skew the parallelogram */
+        width: 1080px;
+        height: 1400px;
+        background: linear-gradient(135deg, #ffffffbe, #ffffff2d);
+        z-index: 2;
+        /* Same as the text or slightly lower edited 1-30-25 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+
+/* ADDED 1-31-25 */
+
+/* Semi large devices (tablets, 853px and below) ADDED 1-31-25 */
+@media (max-width: 853px) {
+
+    /* INTRODUCTION SECTION DIVS CSS */
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+    }
+
+    .intro-div-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        width: 55%;
+    }
+
+    .intro-caption-one {
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        line-height: 4rem
+    }
+
+    .intro-pcaption-sub {
+        display: none;
+    }
+
+    .intro-pcaption-one {
+        color: #000000;
+        font-style: italic;
+        font-size: 55px;
+    }
+
+    .intro-pcaption-two {
+        font-size: 75px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+        line-height: 6rem;
+    }
+
+    .intro-pcaption-three {
+        color: #00158d;
+        font-style: italic;
+        font-size: 75px;
+    }
+
+    .intro-pcaption-four {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: #00158d;
+        line-height: 6rem
+    }
+
+    /* INTRODUCTION BUTTONS CSS */
+    .intro-div-btn {
+        display: none;
+    }
+
+    .intro-btn-one {
+        display: none;
+    }
+
+    .intro-btn-two {
+        display: none;
+    }
+
+    .intro-div-opacity {
+        display: none;
+    }
+
+    .intro-image {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        left: 0;
+        padding-left: 0%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .custom-caption-one {
+        position: absolute;
+        top: 75%;
+        left: 56%;
+        width: 110%;
+        transform: translateX(-50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+    }
+
+    .custom-caption-two {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        z-index: 3;
+    }
+
+    .img-parallelogram {
+        position: absolute;
+        /* Positioned over the image */
+        top: 50%;
+        /* Adjust vertical position */
+        left: 15%;
+        /* Adjust horizontal position */
+        transform: translate(-50%, -50%) skew(-20deg);
+        /* Center and skew the parallelogram */
+        width: 1000px;
+        height: 1300px;
+        background: linear-gradient(135deg, #ffffffbe, #ffffff2d);
+        z-index: 2;
+        /* Same as the text or slightly lower edited 1-30-25 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+
+    /* INTRODUCTION SECTION CSS */
+    .navbar-logo {
+        margin-left: 2px;
+    }
+
+    .intro-caption-one {
+        font-size: 45px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #ffffff;
+        line-height: 3rem
+    }
+
+    .intro-pcaption-one {
+        color: #000000;
+        font-style: italic;
+        font-size: 50px;
+    }
+
+    .intro-pcaption-sub {
+        display: none;
+    }
+
+    .intro-pcaption-two {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #ffffff;
+        line-height: 3rem
+    }
+
+    .intro-pcaption-three {
+        color: #00158d;
+        font-style: italic;
+        font-size: 40px;
+    }
+
+    .intro-pcaption-four {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #00158d;
+        line-height: 3rem
+    }
+
+    /* INTRODUCTION BUTTONS CSS */
+    .intro-div-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        position: absolute;
+        padding-left: 30px;
+        left: 1%;
+        top: 75%;
+    }
+
+    .img-parallelogram {
+        display: none;
+    }
+
+    .custom-caption-one {
+        position: absolute;
+        top: 75%;
+        left: 45%;
+        width: 90%;
+        transform: translateX(-50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+    }
+
+    .custom-caption-two {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        z-index: 3;
+    }
+
+    .intro-image {
+        clip-path: none;
+        left: 0;
+        right: 0;
+        padding-left: 0%;
+    }
+    
+    .intro-image-two {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+        /* Behind the parallelogram and text */
+    }
+
+    .intro-div-opacity {
+        position: absolute;
+        /* Overlay on top of the image */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(60, 60, 60, 0.300);
+        /* Transparent dark overlay */
+        z-index: -1;
+        /* Higher than the image */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-parallelogram {
+        position: absolute;
+        /* Positioned over the image */
+        top: 50%;
+        /* Adjust vertical position */
+        left: 15%;
+        /* Adjust horizontal position */
+        transform: translate(-50%, -50%) skew(-20deg);
+        /* Center and skew the parallelogram */
+        width: 400px;
+        height: 1300px;
+        background: linear-gradient(135deg, #ffffffbe, #ffffff2d);
+        z-index: 2;
+        /* Same as the text or slightly lower edited 1-30-25 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+
+/* Small devices (mobile phones, 576px and below) */
+@media (max-width: 576px) {
+
+    /* INTRODUCTION SECTION CSS */
+    .navbar-logo {
+        margin-left: 2px;
+    }
+
+    .intro-caption-one {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #ffffff;
+        line-height: 2.5rem
+    }
+
+    .intro-pcaption-one {
+        color: #000000;
+        font-style: italic;
+        font-size: 35px;
+    }
+
+    .intro-pcaption-sub {
+        display: none;
+    }
+
+    .intro-pcaption-two {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #ffffff;
+        line-height: 3rem
+    }
+
+    .intro-pcaption-three {
+        color: #00158d;
+        font-style: italic;
+        font-size: 40px;
+    }
+
+    .intro-pcaption-four {
+        font-size: 35px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #00158d;
+        line-height: 3rem
+    }
+
+    /* INTRODUCTION BUTTONS CSS */
+    .intro-div-btn {
+        display: none;
+    }
+
+    .intro-btn-one {
+        display: none;
+    }
+
+    .intro-btn-two {
+        display: none;
+    }
+
+    .img-parallelogram {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%) skew(-20deg);
+        width: 450px;
+        height: 1000px;
+        background: linear-gradient(135deg, #ffffff6e, #ffffff7a);
+        z-index: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .custom-caption-one {
+        position: absolute;
+        top: 12%;
+        left: 45%;
+        width: 90%;
+        transform: translateX(-50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+    }
+
+    .custom-caption-two {
+        position: absolute;
+        top: 90%;
+        left: 60%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        text-align: end;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        text-align: end;
+        z-index: 3;
+    }
+
+    .custom-caption-three {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-image {
+        clip-path: none;
+        left: 0;
+        right: 0;
+        padding-left: 0%;
+    }
+
+    .intro-image-two {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+        /* Behind the parallelogram and text */
+    }
+
+    .intro-div-opacity {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(68, 68, 68, 0.425);
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-parallelogram {
+        position: absolute;
+        /* Positioned over the image */
+        top: 50%;
+        /* Adjust vertical position */
+        left: 15%;
+        /* Adjust horizontal position */
+        transform: translate(-50%, -50%) skew(-20deg);
+        /* Center and skew the parallelogram */
+        width: 500px;
+        height: 1300px;
+        background: linear-gradient(135deg, #ffffffbe, #ffffff2d);
+        z-index: 2;
+        /* Same as the text or slightly lower edited 1-30-25 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .navbar-logo {
+        margin-left: 2px;
+    }
+
+    .intro-caption-one {
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #ffffff;
+        line-height: 1.7rem
+    }
+
+    .intro-pcaption-one {
+        color: #000000;
+        font-style: italic;
+        font-size: 28px;
+    }
+
+    .intro-pcaption-sub {
+        display: none;
+    }
+
+    .intro-pcaption-two {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #ffffff;
+        line-height: 2.3rem
+    }
+
+    .intro-pcaption-three {
+        color: #00158d;
+        font-style: italic;
+        font-size: 30px;
+    }
+
+    .intro-pcaption-four {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #00158d;
+        line-height: 1.8rem
+    }
+
+    /* INTRODUCTION BUTTONS CSS */
+    .intro-div-btn {
+        display: none;
+    }
+
+    .intro-btn-one {
+        display: none;
+    }
+
+    .intro-btn-two {
+        display: none;
+    }
+
+    .img-parallelogram {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%) skew(-20deg);
+        width: 350px;
+        height: 1000px;
+        background: linear-gradient(135deg, #ffffff6e, #ffffff7a);
+        z-index: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .custom-caption-one {
+        position: absolute;
+        top: 15%;
+        left: 40%;
+        width: 90%;
+        transform: translateX(-50%);
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+    }
+
+    .custom-caption-two {
+        position: absolute;
+        top: 90%;
+        left: 60%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        text-align: end;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        text-align: end;
+        z-index: 3;
+    }
+
+    .custom-caption-three {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-image {
+        clip-path: none;
+        left: 0;
+        right: 0;
+        padding-left: 0%;
+    }
+
+    .intro-image-two {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+        /* Behind the parallelogram and text */
+    }
+
+    .intro-div-opacity {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(68, 68, 68, 0.425);
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
