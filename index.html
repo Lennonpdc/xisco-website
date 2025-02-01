@@ -5,28 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xisco</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/custom_intro-css.css"> <!-- Custom Styles -->
 </head>
 <body>
 
-    <!-- Navbar -->
-    <?php include "navbar.php"; ?>
+    <!-- Navbar (Loaded via JavaScript from navbar.html) -->
+    <div id="navbar-container"></div>
 
-    <!-- Home Section -->
-    <section id="introduction">
-      <?php include "introduction.php"; ?>
-    </section>
+    <!-- Dynamic Content Section -->
+    <div id="content" class="container mt-5">
+        <!-- Content will be loaded here via JavaScript -->
+    </div>
 
-    <!-- Contact Us Section -->
-    <section id="contact-us">
-      <?php include "contact-us.php"; ?>
-    </section>
+    <!-- Footer Section (Loaded via JavaScript from footer.html) -->
+    <div id="footer-container"></div>
 
-    <!-- Footer Section -->
-    <section id="footer">
-      <?php include "footer.php"; ?>
-    </section>
-    
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to load a specific section from the 'pages' folder
+        function loadSection(section) {
+            // Use the fetch API to load the content of the section
+            fetch(`pages/${section}.html`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("content").innerHTML = data; // Load content into the main content area
+                })
+                .catch(error => console.error('Error loading section:', error));
+        }
+
+        // Function to load navbar
+        function loadNavbar() {
+            fetch('pages/navbar.html')  // Fetch navbar content
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;  // Inject the navbar content into the DOM
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        }
+
+        // Function to load footer
+        function loadFooter() {
+            fetch('pages/footer.html')  // Fetch footer content
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-container").innerHTML = data;  // Inject the footer content into the DOM
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        // Load the default section (e.g., introduction) on page load
+        window.onload = function() {
+            loadNavbar();            // Load the navbar
+            loadSection('introduction');  // Load the default section (introduction)
+            loadFooter();            // Load the footer
+        }
+    </script>
 
 </body>
 </html>
