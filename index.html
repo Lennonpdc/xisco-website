@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xisco</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/custom_intro-css.css"> <!-- Custom Styles -->
 </head>
+
 <body>
 
     <!-- Navbar (Loaded via JavaScript from navbar.html) -->
@@ -20,7 +22,7 @@
     <!-- Footer Section (Loaded via JavaScript from footer.html) -->
     <div id="footer-container"></div>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script>
         // Function to load a specific section from the 'pages' folder
         function loadSection(section) {
@@ -54,12 +56,15 @@
         }
 
         // Load the default section (e.g., introduction) on page load
-        window.onload = function() {
+        window.onload = function () {
             loadNavbar();            // Load the navbar
             loadSection('introduction');  // Load the default section (introduction)
             loadFooter();            // Load the footer
         }
     </script>
 
+    <script src="./assets/js/custom_intro-js.js"></script>
+
 </body>
+
 </html>
