@@ -11,22 +11,3 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('scrolled');
   }
 });
-
-// Select all the navbar links
-const navbarLinks = document.querySelectorAll('a.nav-link');
-
-// Add click event listener to each link
-navbarLinks.forEach(link => {
-  link.addEventListener('click', function (event) {
-    event.preventDefault();  // Prevent default link behavior
-
-    // Get the target section ID from the link's href
-    const targetSection = document.querySelector(this.getAttribute('href'));
-
-    // Scroll to the target section with smooth behavior
-    targetSection.scrollIntoView({
-      behavior: 'smooth',   // Smooth scroll
-      block: 'start'        // Align to the top of the section
-    });
-  });
-});
